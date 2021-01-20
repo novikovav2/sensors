@@ -18,5 +18,4 @@ require("channels")
 
 // require("chartkick")
 // require("chart.js")
-
 require("chartkick").use(require("highcharts"))

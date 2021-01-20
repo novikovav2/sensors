@@ -7,5 +7,7 @@ last: <%= @house_data.last[1] %>
                defer: true,
                refresh: 60,
                xtitle: "Время",
-               ytitle: "Температура" %>
+               ytitle: "Температура",
+               library: {time: {timezoneOffset: -4 * 60}} %>
+
 
