@@ -1,5 +1,11 @@
-<%= line_chart @house_data, min: nil, max: nil, xtitle: "Time", ytitle: "Value",messages: {empty: "No data"} %>
-
 last: <%= @house_data.last[1] %>
 
-<%= line_chart @bath_data, messages: {empty: "No data"} %>
+<%= line_chart @data,
+               messages: {empty: "No data"},
+               min: nil,
+               max: nil,
+               defer: true,
+               refresh: 60,
+               xtitle: "Время",
+               ytitle: "Температура" %>
+
