@@ -47,8 +47,11 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+#production:
+#  <<: *default
+#  database: sensors_production
+#  username: sensors
+#  password: <%#= ENV['SENSORS_DATABASE_PASSWORD'] %>
+
 production:
-  <<: *default
-  database: sensors_production
-  username: sensors
-  password: <%= ENV['SENSORS_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
