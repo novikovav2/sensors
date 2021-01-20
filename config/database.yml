@@ -54,7 +54,8 @@ test:
 #  password: <%#= ENV['SENSORS_DATABASE_PASSWORD'] %>
 
 production:
-  url: <%= ENV['DATABASE_URL'] %>
-  sslca: cleardb-ca.pem
-  sslcert: bfe04df7ca1774-cert.pem
-  sslkey: bfe04df7ca1774-key-no-password.pem
+#  url: <%#= ENV['DATABASE_URL'] %>
+#  sslca: cleardb-ca.pem
+#  sslcert: bfe04df7ca1774-cert.pem
+#  sslkey: bfe04df7ca1774-key-no-password.pem
+  url: mysql2://bfe04df7ca1774:2e523a08@us-cdbr-east-03.cleardb.com/heroku_f249559aa899c1c?sslcert=bfe04df7ca1774-cert.pem&sslca=cleardb-ca.pem&sslkey=bfe04df7ca1774-key-no-password.pem&reconnect=true
