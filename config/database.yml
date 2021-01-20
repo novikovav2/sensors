@@ -55,3 +55,6 @@ test:
 
 production:
   url: <%= ENV['DATABASE_URL'] %>
+  sslca: cleardb-ca.pem
+  sslcert: bfe04df7ca1774-cert.pem
+  sslkey: bfe04df7ca1774-key-no-password.pem
