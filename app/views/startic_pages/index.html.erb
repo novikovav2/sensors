@@ -1,1 +1,5 @@
-ROOT PAGE
+<%= line_chart @house_data, min: nil, max: nil, xtitle: "Time", ytitle: "Value",messages: {empty: "No data"} %>
+
+last: <%= @house_data.last[1] %>
+
+<%= line_chart @bath_data, messages: {empty: "No data"} %>
