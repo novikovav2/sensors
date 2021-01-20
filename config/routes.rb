@@ -4,4 +4,8 @@ Rails.application.routes.draw do
 
   root to: 'startic_pages#index'
 
+  constraints format: :json do
+    post '/data', to: 'temperature#load'
+  end
+
 end
