@@ -53,9 +53,21 @@ test:
 #  username: sensors
 #  password: <%#= ENV['SENSORS_DATABASE_PASSWORD'] %>
 
-production:
+#production:
 #  url: <%#= ENV['DATABASE_URL'] %>
 #  sslca: cleardb-ca.pem
 #  sslcert: bfe04df7ca1774-cert.pem
 #  sslkey: bfe04df7ca1774-key-no-password.pem
-  url: mysql2://bfe04df7ca1774:2e523a08@us-cdbr-east-03.cleardb.com/heroku_f249559aa899c1c?sslcert=bfe04df7ca1774-cert.pem&sslca=cleardb-ca.pem&sslkey=bfe04df7ca1774-key-no-password.pem&reconnect=true
+#
+
+production:
+  <<: *default
+  database: heroku_f249559aa899c1c
+  username: bfe04df7ca1774
+  password: 2e523a08
+  adapter: mysql2
+  encoding: utf8mb4
+  host: us-cdbr-east-03.cleardb.com
+  sslca: cleardb-ca.pem
+  sslcert: bfe04df7ca1774-cert.pem
+  sslkey: bfe04df7ca1774-key-no-password.pem
