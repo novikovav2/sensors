@@ -61,13 +61,5 @@ test:
 #
 
 production:
-  <<: *default
-  database: heroku_f249559aa899c1c
-  username: bfe04df7ca1774
-  password: 2e523a08
-  adapter: mysql2
-  encoding: utf8mb4
-  host: us-cdbr-east-03.cleardb.com
-  sslca: cleardb-ca.pem
-  sslcert: bfe04df7ca1774-cert.pem
-  sslkey: bfe04df7ca1774-key-no-password.pem
+  ssl_mode: disabled
+  url: <%= ENV['DATABASE_URL'] %>
