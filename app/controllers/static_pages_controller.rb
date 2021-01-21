@@ -1,4 +1,4 @@
-class StarticPagesController < ApplicationController
+class StaticPagesController < ApplicationController
 
   # ROOT page
   def index
@@ -11,6 +11,9 @@ class StarticPagesController < ApplicationController
     @data = [{name: 'Дом', data: @house_data, color: 'red'},
              { name: 'Баня', data: @bath_data, color: 'green' }
     ]
+
+    @last_house_data = Temperature.where(sensor: 'house').order(:created_at).last
+    @last_bath_data = Temperature.where(sensor: 'banya').order(:created_at).last
 
   end
 end

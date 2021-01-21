@@ -1,0 +1,50 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.last-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-around;
+  margin-bottom: 64px;
+
+  &_item {
+    flex-basis: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 4px;
+    min-height: 85px;
+  }
+
+  &_group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__house {
+    background-color: #e79592;
+  }
+
+  &__bath {
+    background-color: #6ab8f7;
+  }
+
+  &_title {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  &_value {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &_date {
+
+  }
+}
