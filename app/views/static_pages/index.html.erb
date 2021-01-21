@@ -1,3 +1,6 @@
+
+
+
 <div class="last-values">
   <div class="last-values_item last-values__house">
     <p class="last-values_title">Дом:</p>
@@ -32,7 +35,6 @@
 
 </div>
 
-
 <%= line_chart @data,
                messages: {empty: "No data"},
                min: nil,
@@ -42,5 +44,4 @@
                xtitle: "Время",
                ytitle: "Температура",
                library: {time: {timezoneOffset: -4 * 60}} %>
-
 
