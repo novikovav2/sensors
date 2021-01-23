@@ -9,7 +9,7 @@ class TemperatureController < ApplicationController
       )
     if temp.save
       render json: temp, status: 200
-      Temperature.where("created_at < ?", 24.hours.ago).destroy_all
+      Temperature.where("sensor = '#{params['sensor']}' and created_at < '#{24.hours.ago}'").destroy_all
     else
       render json: temp.errors, status: 401
     end

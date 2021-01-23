@@ -49,6 +49,13 @@
   }
 }
 
+.chart {
+  background-color: white;
+  padding: 0 12px;
+  box-shadow: 0px 0px 7px 0px rgb(141, 161, 184);
+  border-radius: 8px;
+}
+
 @media (max-width: 1025px) {
   .last-values {
     margin-bottom: 32px;
@@ -67,5 +74,9 @@
       flex-basis: 300px;
       min-height: 64px;
     }
+  }
+
+  .chart {
+    padding: 0 6px;
   }
 }

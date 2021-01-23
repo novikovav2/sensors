@@ -35,13 +35,15 @@
 
 </div>
 
-<%= line_chart @data,
-               messages: {empty: "No data"},
-               min: nil,
-               max: nil,
-               defer: true,
-               refresh: 60,
-               xtitle: "Время",
-               ytitle: "Температура",
-               library: {time: {timezoneOffset: -4 * 60}} %>
+<div class="chart">
+  <%= line_chart @data,
+                 messages: {empty: "За последние 12 часов данных нет"},
+                 min: nil,
+                 max: nil,
+                 defer: true,
+                 xtitle: "Время",
+                 ytitle: "Температура",
+                 library: {time: {timezoneOffset: -4 * 60}} %>
+</div>
+
 
