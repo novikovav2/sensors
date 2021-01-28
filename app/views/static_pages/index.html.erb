@@ -9,7 +9,8 @@
         <p class="last-values_value">
           <%= @last_house_data.data %> &degС
         </p>
-        <p class="last-values_date">
+        <p class="last-values_date
+                  <%= @last_house_data.created_at < 1.hours.ago ? 'last-values__warning' : '' %>">
           <%= @last_house_data.created_at.strftime("%H:%M %d.%m.%Y") %>
         </p>
       <% else %>
@@ -24,7 +25,8 @@
         <p class="last-values_value">
           <%= @last_bath_data.data %> &degС
         </p>
-        <p class="last-values_date">
+        <p class="last-values_date
+                  <%= @last_bath_data.created_at < 1.hours.ago ? 'last-values__warning' : '' %> ">
           <%= @last_bath_data.created_at.strftime("%H:%M %d.%m.%Y") %>
         </p>
       <% else %>

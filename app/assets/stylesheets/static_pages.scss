@@ -47,6 +47,12 @@
   &_date {
 
   }
+
+  &__warning {
+    color: #c61717;
+    text-decoration: underline;
+    font-weight: 700;
+  }
 }
 
 .chart {
